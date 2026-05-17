@@ -1,0 +1,49 @@
+.job-card {
+  background: #ffffff;
+  border-radius: 14px;
+  padding: 20px;
+  box-shadow: 0 3px 12px rgba(0, 0, 0, 0.08);
+}
+
+.job-card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 12px;
+}
+
+.job-card-header h3 {
+  margin: 0;
+  color: #1e293b;
+}
+
+.status {
+  background: #dbeafe;
+  color: #1d4ed8;
+  padding: 4px 10px;
+  border-radius: 999px;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.actions {
+  margin-top: 16px;
+  display: flex;
+  gap: 10px;
+}
+
+.actions button {
+  border: none;
+  padding: 10px 14px;
+  border-radius: 8px;
+  color: white;
+  font-weight: 600;
+}
+
+.edit-btn {
+  background: #0ea5e9;
+}
+
+.delete-btn {
+  background: #ef4444;
+}

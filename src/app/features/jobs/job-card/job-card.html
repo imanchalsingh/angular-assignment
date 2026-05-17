@@ -1,1 +1,19 @@
-<p>job-card works!</p>
+<div class="job-card">
+  <div class="job-card-header">
+    <h3>{{ job.position }}</h3>
+    <span class="status">{{ job.status }}</span>
+  </div>
+
+  <p><strong>Company:</strong> {{ job.company }}</p>
+  <p><strong>Location:</strong> {{ job.location }}</p>
+  <p><strong>Type:</strong> {{ job.jobType }}</p>
+  <p><strong>Applied:</strong> {{ job.appliedDate }}</p>
+
+  <p *ngIf="job.salary"><strong>Salary:</strong> {{ job.salary }}</p>
+  <p *ngIf="job.notes"><strong>Notes:</strong> {{ job.notes }}</p>
+
+  <div class="actions">
+    <button class="edit-btn" (click)="onEdit()">Edit</button>
+    <button class="delete-btn" (click)="onDelete()">Delete</button>
+  </div>
+</div>
