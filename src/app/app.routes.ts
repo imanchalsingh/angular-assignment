@@ -1,11 +1,9 @@
-import { NgModule } from '@angular/core';
-import { RouterModule, Routes } from '@angular/router';
+import { Routes } from '@angular/router';
+import { DashboardHomeComponent } from './features/dashboard/dashboard-home/dashboard-home';
+import { JobFormComponent } from './features/jobs/job-form/job-form';
+import { JobListComponent } from './features/jobs/job-list/job-list';
 
-import { DashboardComponent } from '../components/dashboard/dashboard.component';
-import { JobFormComponent } from '../components/job-form/job-form.component';
-import { JobListComponent } from '../components/job-list/job-list.component';
-
-const routes: Routes = [
+export const routes: Routes = [
   {
     path: '',
     redirectTo: 'dashboard',
@@ -13,7 +11,7 @@ const routes: Routes = [
   },
   {
     path: 'dashboard',
-    component: DashboardComponent
+    component: DashboardHomeComponent
   },
   {
     path: 'add-job',
@@ -32,9 +30,3 @@ const routes: Routes = [
     redirectTo: 'dashboard'
   }
 ];
-
-@NgModule({
-  imports: [RouterModule.forRoot(routes)],
-  exports: [RouterModule]
-})
-export class AppRoutingModule {}
