@@ -1,13 +1,17 @@
 import { Component, OnInit } from '@angular/core';
-import { JobService } from '../../services/job.service';
-import { Job } from '../../models/job.model';
+import { CommonModule } from '@angular/common';
+import { JobService } from '../../../core/services/jobs';
+import { Job } from '../../../models/job.models';
+import { StatsCardComponent } from '../stats-cards/stats-cards';
 
 @Component({
   selector: 'app-dashboard',
+  standalone: true,
+  imports: [CommonModule, StatsCardComponent],
   templateUrl: './dashboard-home.html',
   styleUrls: ['./dashboard-home.css']
 })
-export class DashboardComponent implements OnInit {
+export class DashboardHomeComponent implements OnInit {
   jobs: Job[] = [];
 
   totalJobs = 0;
