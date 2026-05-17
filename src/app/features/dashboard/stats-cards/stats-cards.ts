@@ -1,9 +1,11 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 
 @Component({
-  selector: 'app-stats-cards',
-  imports: [],
+  selector: 'app-stats-card',
   templateUrl: './stats-cards.html',
-  styleUrl: './stats-cards.css',
+  styleUrls: ['./stats-cards.css']
 })
-export class StatsCards {}
+export class StatsCardComponent {
+  @Input() title: string = '';
+  @Input() count: number = 0;
+}
