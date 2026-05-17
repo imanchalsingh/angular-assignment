@@ -1,1 +1,21 @@
-<p>job-list works!</p>
+<div class="job-list-container">
+  <h1>All Job Applications</h1>
+
+  <app-search-filter
+    (searchChange)="onSearchChange($event)"
+    (statusChange)="onStatusChange($event)"
+  ></app-search-filter>
+
+  <div *ngIf="filteredJobs.length === 0" class="empty-state">
+    No jobs found.
+  </div>
+
+  <div class="jobs-grid" *ngIf="filteredJobs.length > 0">
+    <app-job-card
+      *ngFor="let job of filteredJobs"
+      [job]="job"
+      (edit)="editJob($event)"
+      (delete)="deleteJob($event)"
+    ></app-job-card>
+  </div>
+</div>

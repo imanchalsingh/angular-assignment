@@ -1,0 +1,19 @@
+.job-list-container h1 {
+  margin-bottom: 24px;
+  color: #1e293b;
+}
+
+.jobs-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 20px;
+}
+
+.empty-state {
+  background: #ffffff;
+  padding: 24px;
+  border-radius: 12px;
+  text-align: center;
+  color: #64748b;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+}
