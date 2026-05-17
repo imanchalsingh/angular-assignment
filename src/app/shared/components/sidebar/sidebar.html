@@ -1,1 +1,12 @@
-<p>sidebar works!</p>
+<aside [class.open]="isOpen" class="sidebar">
+  <nav>
+    <ul>
+      <li *ngFor="let item of menuItems">
+        <a [routerLink]="item.route" (click)="closeSidebar()">
+          <span class="icon">{{ item.icon }}</span>
+          <span>{{ item.label }}</span>
+        </a>
+      </li>
+    </ul>
+  </nav>
+</aside>
