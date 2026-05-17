@@ -1,0 +1,19 @@
+.filter-container {
+  display: flex;
+  gap: 16px;
+  margin-bottom: 24px;
+}
+
+.filter-container input,
+.filter-container select {
+  padding: 12px;
+  border: 1px solid #cbd5e1;
+  border-radius: 8px;
+  flex: 1;
+}
+
+@media (max-width: 768px) {
+  .filter-container {
+    flex-direction: column;
+  }
+}

@@ -1,0 +1,14 @@
+<div class="filter-container">
+  <input
+    type="text"
+    placeholder="Search by company, position, or location"
+    [(ngModel)]="searchTerm"
+    (input)="onSearch()"
+  />
+
+  <select [(ngModel)]="selectedStatus" (change)="onStatusChange()">
+    <option *ngFor="let status of statuses" [value]="status">
+      {{ status }}
+    </option>
+  </select>
+</div>
