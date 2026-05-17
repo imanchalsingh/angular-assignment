@@ -1,1 +1,15 @@
-<p>dashboard-home works!</p>
+<div class="dashboard">
+  <h1>Job Tracker Dashboard</h1>
+
+  <div class="stats-grid">
+    <app-stats-card title="Total Jobs" [count]="totalJobs"></app-stats-card>
+    <app-stats-card title="Applied" [count]="appliedCount"></app-stats-card>
+    <app-stats-card title="Interview" [count]="interviewCount"></app-stats-card>
+    <app-stats-card title="Offer" [count]="offerCount"></app-stats-card>
+    <app-stats-card title="Rejected" [count]="rejectedCount"></app-stats-card>
+  </div>
+</div>
+
+<div *ngIf="totalJobs === 0" class="empty-state">
+  No jobs added yet. Start by adding your first application.
+</div>
